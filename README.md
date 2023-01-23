@@ -12,9 +12,12 @@ Full Stack Developer
 
 ## Wireframing & Concept 📝
 
-![wireframe](-)
+![wireframe](https://i.imgur.com/NIcNmDB.png)
+![wireframe](https://i.imgur.com/Ka1UyYz.png)
+![wireframe](https://i.imgur.com/q9R1kFm.png)
+
 Prior to project start, wireframing was completed to show ideal project design and flow. The above screenshot details a basic design concept prior to beginning the project.
-![Imgur](-)
+![Imgur](https://i.imgur.com/GXJJb8z.png)
 The entity relationship diagram (ERD) above details schema and model relationships developed during the project planning process.
 
 Project planning materials are held in [this](https://trello.com/b/9BLf52OM/project-2) public Trello board.
