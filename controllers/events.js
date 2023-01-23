@@ -2,7 +2,8 @@ const Event = require("../models/event");
 
 module.exports = {
   index,
-  new:newEvent,
+  new: newEvent,
+  create,
 };
 
 function index(req, res) {
@@ -13,4 +14,13 @@ function index(req, res) {
 
 function newEvent(req, res) {
   res.render("events/new", { title: "Add Event" });
+}
+
+function create(req, res) {
+  const event = new Event(req.body);
+  event.save(function (err) {
+    if (err) return res.redirect("/events/new");
+    console.log(event);
+    res.redirect(`/events/${event._id}`);
+  });
 }
