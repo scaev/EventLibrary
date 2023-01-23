@@ -1,29 +1,30 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-
-const commentSchema = new Schema({
+const commentSchema = new Schema(
+  {
     content: {
       type: String,
-      required: true
+      required: true,
     },
     participationRate: {
       type: Number,
       min: 1,
       max: 5,
-      default: 5
+      default: 5,
     },
     user: {
       type: Schema.Types.ObjectId,
-      ref: 'User',
-      required: true
+      ref: "User",
+      required: true,
     },
     userName: String,
-    userAvatar: String
-  }, {
-    timestamps: true
-  });
-
+    userAvatar: String,
+  },
+  {
+    timestamps: true,
+  }
+);
 
 const eventSchema = new Schema(
   {
