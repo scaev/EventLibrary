@@ -1,20 +1,20 @@
-var createError = require("http-errors");
-var express = require("express");
-var path = require("path");
-var cookieParser = require("cookie-parser");
-var logger = require("morgan");
-var session = require("express-session");
+const createError = require("http-errors");
+const express = require("express");
+const path = require("path");
+const cookieParser = require("cookie-parser");
+const logger = require("morgan");
+const session = require("express-session");
 const passport = require("passport");
 
 require("dotenv").config();
 require("./config/database");
 require("./config/passport");
 
-var indexRouter = require("./routes/index");
-var eventsRouter = require("./routes/events");
-var commentsRouter = require("./routes/comments");
+const indexRouter = require("./routes/index");
+const eventsRouter = require("./routes/events");
+const commentsRouter = require("./routes/comments");
 
-var app = express();
+const app = express();
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
