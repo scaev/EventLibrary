@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:500);
 * {
   box-sizing: border-box;
   font-family: Helvetica;
@@ -16,7 +17,14 @@ body {
 
 body > nav {
   grid-area: nav;
-  background-color: #b8c0c2;
+  background: radial-gradient(
+    circle at 33% 100%,
+    #fed373 4%,
+    #f15245 30%,
+    #d92e7f 62%,
+    #9b36b7 85%,
+    #515ecf
+  );
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -102,4 +110,24 @@ table td {
 #list td:nth-child(2),
 #list td:nth-child(3) {
   min-width: 100px;
+}
+
+#show-page {
+  background: linear-gradient(45deg, #3498db, #9b59b6);
+  font-family: Raleway;
+  color: whitesmoke;
+  padding: 20px;
+  /* width: 500px; */
+  margin: auto;
+  text-align: center;
+  border-radius: 5px;
+  border: solid;
+  border-color: #076eb3;
+  /* display: grid; */
+  /* grid-template-columns: auto auto; */
+  /* grid-gap: 1rem; */
+}
+
+#show-page div:nth-child(even) {
+  font-weight: bold;
 }
