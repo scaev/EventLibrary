@@ -11,7 +11,7 @@ require("./config/database");
 require("./config/passport");
 
 var indexRouter = require("./routes/index");
-var eventsRouter = require("./routes/comments");
+var eventsRouter = require("./routes/events");
 var commentsRouter = require("./routes/comments");
 
 var app = express();
