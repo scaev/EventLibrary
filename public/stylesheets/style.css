@@ -84,3 +84,22 @@ nav > a.active {
   width: 10rem;
   margin-left: auto;
 }
+
+table {
+  font-size: 20px;
+}
+
+table thead th {
+  padding: 5px;
+  border-bottom: 2px solid #424748;
+}
+
+table td {
+  padding: 10px;
+  text-align: center;
+}
+
+#list td:nth-child(2),
+#list td:nth-child(3) {
+  min-width: 100px;
+}

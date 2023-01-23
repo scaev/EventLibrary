@@ -4,6 +4,7 @@ module.exports = {
   index,
   new: newEvent,
   create,
+  show,
 };
 
 function index(req, res) {
@@ -22,5 +23,13 @@ function create(req, res) {
     if (err) return res.redirect("/events/new");
     console.log(event);
     res.redirect(`/events/${event._id}`);
+  });
+}
+
+function show(req, res) {
+  Event.findById(req.params.id, function (err, event) {
+    Event.find({ event: event._id }, function(err, tickets) {
+    res.render('events/show', { title: 'Event Detail', event});
+  });
   });
 }
