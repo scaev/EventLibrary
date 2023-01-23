@@ -9,8 +9,10 @@
   </head>
   <body>
     <nav>
+        <a href="/events" <%- title === 'All Events' ? 'class="active"' : '' %>>ALL EVENTS</a>
       <% if (user) { %>
-      <a href="/logout">LOG OUT</a>
+        <a href="/events/new" <%- title === 'Add Event' ? 'class="active"' : '' %>>ADD EVENT</a>
+        <a href="/logout">LOG OUT</a>
       <% } else { %>
       <a href="/auth/google" class="login"
         >LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"

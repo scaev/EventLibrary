@@ -1,0 +1,22 @@
+<%- include('../partials/header') %>
+
+<form id="new-form" action="/events" method="POST">
+  <label>Title:</label>
+  <input type="text" name="title" />
+  <label>Event Date:</label>
+  <input type="text" name="eventDate" />
+  <label>Event Category</label>
+  <select name="eventCategory">
+    <option value="Yoga">Yoga</option>
+    <option value="Swimming">Swimming</option>
+    <option value="Concert">Concert</option>
+    <option value="Dance party">Dance party</option>
+    <option value="Happy hour">Happy hour</option>
+    <option value="Karaoke">Karaoke</option>
+  </select>
+  <label>Location:</label>
+  <input type="text" name="eventLocation" />
+  <input type="submit" value="Add Event" />
+</form>
+
+<%- include('../partials/footer') %>

@@ -45,7 +45,7 @@ const eventSchema = new Schema(
         "Yoga",
         "Swimming",
         "Concert",
-        "Games night",
+        "Concert",
         "Dance party",
         "Happy hour",
         "Karaoke",
