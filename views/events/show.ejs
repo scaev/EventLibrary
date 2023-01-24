@@ -4,9 +4,17 @@
   <div>Title:</div>
   <div><%= event.title %></div>
   <div>Event Date:</div>
-  <div><%= event.eventDate %></div>
+  <div><%= event.eventDate.toLocaleDateString()%> - <%= event.eventDate.toLocaleTimeString('en-US')%></div>
   <div>Participation Rate:</div>
-  <div><%= event.participationRate %></div>
+  <% if (event.comments.length) { %>
+    <% let total = 0 %> <% event.comments.forEach(function(c) { %> <% total +=
+        c.participationRate %>
+    <% }); %>
+    <strong> %<%= ((total / event.comments.length)*10).toFixed(1) %> </strong>
+    <% } else { %>
+    <div>No Participating Yet</div>
+    <% } %>
+ 
 </section>
 
 <br /><br />
@@ -59,7 +67,7 @@
       </td>
       <td><%= c.createdAt.toLocaleDateString() %></td>
       <td><%= c.content %></td>
-      <td><%= c.participationRate %></td>
+      <td><%= c.participationRate %>/10</td>
       <td>
         <% if (user?._id.equals(c.user)) { %>
         <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
@@ -70,9 +78,9 @@
     </tr>
     <% }); %>
     <tr>
-      <td colspan="2"></td>
+      <td colspan="3"></td>
       <td>
-        <strong> <%= (total / event.comments.length).toFixed(1) %> </strong>
+        <strong> <%= (total / event.comments.length).toFixed(1) %>/10</strong>
       </td>
     </tr>
   </tbody>

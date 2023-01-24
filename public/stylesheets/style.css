@@ -80,8 +80,7 @@ nav > a.active {
 }
 
 #new-form *,
-#add-review-form *,
-#add-performer-form * {
+#add-comment-form * {
   font-size: 20px;
   padding: 5px;
   border-radius: 5px;
@@ -112,6 +111,18 @@ table td {
   min-width: 100px;
 }
 
+#list a {
+  border-radius: 4px;
+  background-color: #b8c0c2;
+  padding: 4px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+#list a:hover {
+  background-color: white;
+}
+
 #show-page {
   background: linear-gradient(45deg, #3498db, #9b59b6);
   font-family: Raleway;
@@ -130,4 +141,52 @@ table td {
 
 #show-page div:nth-child(even) {
   font-weight: bold;
+}
+
+#add-comment-form {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+#add-comment-form input[type="submit"] {
+  width: 10rem;
+  grid-column: 2 / 3;
+}
+
+hr {
+  color: #424748;
+}
+
+ul {
+  margin: 0 0 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  font-weight: bold;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 34px;
+}
+
+.login img {
+  height: 30px;
+}
+
+.comment-user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.comment-user img {
+  border-radius: 50%;
+  height: 40px;
 }
