@@ -2,9 +2,6 @@ const express = require("express");
 const router = express.Router();
 const commentsCtrl = require("../controllers/comments");
 
-/* GET users listing. */
-router.get("/", function (req, res, next) {
-  res.send("respond with a resource");
-});
+router.post("/events/:id/comments", commentsCtrl.create);
 
 module.exports = router;

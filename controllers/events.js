@@ -28,8 +28,8 @@ function create(req, res) {
 
 function show(req, res) {
   Event.findById(req.params.id, function (err, event) {
-    Event.find({ event: event._id }, function(err, tickets) {
-    res.render('events/show', { title: 'Event Detail', event});
-  });
+    Event.find({ event: event._id }, function (err, comments) {
+      res.render("events/show", { title: "Event Detail", event, comments });
+    });
   });
 }

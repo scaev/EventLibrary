@@ -9,4 +9,74 @@
   <div><%= event.participationRate %></div>
 </section>
 
-<%- include('../partials/footer') %>
+<br /><br />
+<h2>Comments</h2>
+<form
+  id="add-comment-form"
+  method="POST"
+  action="/events/<%= event._id %>/comments"
+>
+  <label>Comments:</label>
+  <textarea name="content"></textarea>
+  <label>Participating:</label>
+  <select name="participationRate">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10" selected>10</option>
+  </select>
+  <input type="submit" value="Add Comment" />
+</form>
+
+<% if (event.comments.length) { %>
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Date</th>
+      <th>Comment</th>
+      <th>Participating</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% let total = 0 %> <% event.comments.forEach(function(c) { %> <% total +=
+    c.participationRate %>
+    <!-- check if there is a problem  -->
+    <tr>
+      <td class="comment-user">
+        <img
+          alt="avatar"
+          src="<%= c.userAvatar %>"
+          referrerpolicy="no-referrer"
+        /><%= c.userName %>
+      </td>
+      <td><%= c.createdAt.toLocaleDateString() %></td>
+      <td><%= c.content %></td>
+      <td><%= c.participationRate %></td>
+      <td>
+        <% if (user?._id.equals(c.user)) { %>
+        <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
+          <button type="submit">X</button>
+        </form>
+        <% } %>
+      </td>
+    </tr>
+    <% }); %>
+    <tr>
+      <td colspan="2"></td>
+      <td>
+        <strong> <%= (total / event.comments.length).toFixed(1) %> </strong>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<% } else { %>
+<h5>No Comments Yet</h5>
+<% } %> <%- include('../partials/footer') %>
