@@ -9,5 +9,6 @@ function ensureLoggedIn(req, res, next) {
 
 router.post("/events/:id/comments", ensureLoggedIn, commentsCtrl.create);
 router.delete("/comments/:id", ensureLoggedIn, commentsCtrl.delete);
+router.put("/comments/:id", commentsCtrl.update);
 
 module.exports = router;

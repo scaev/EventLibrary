@@ -202,10 +202,7 @@ html {
   --text: hsl(var(--hue) 80% 45%);
 
   font-family: var(--font);
-  font-size: min(
-    120%,
-    5vw
-  );
+  font-size: min(120%, 5vw);
   line-height: 1.25;
   color: var(--text);
   background: var(--background);
@@ -216,9 +213,9 @@ article {
   container-type: inline-size;
 }
 
-
 h1,
 .event-date {
+  /* cqi =	1% of a query container’s inline size */
   font-size: max(1.25rem, 12cqi - 1rem);
   font-weight: 700;
   line-height: 1;
@@ -252,7 +249,7 @@ main {
   grid-column-end: span 2;
   grid-row-end: span 2;
   width: 100%;
-  height: calc(100% - 1rem);
+  height: calc(100% - 2rem);
   object-fit: cover;
 }
 .event-name {
@@ -270,6 +267,8 @@ main {
   text-align: right;
   opacity: 0.8;
 }
+
+
 .event-category {
   grid-column-end: span 2;
   grid-row-start: 3;
@@ -278,13 +277,13 @@ main {
   opacity: 0.5;
 }
 
-p > a{
-  grid-column-end: span 2;
-  grid-row-start: 3;
-  margin: 0.5rem 1rem 1rem;
-  line-height: 1.2;
-  opacity: 0.5;
+.event > p >a {
+ 
+  
+  font-weight: 100;
 }
+
+
 
 .event-list {
   display: grid;
