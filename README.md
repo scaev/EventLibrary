@@ -20,6 +20,8 @@ Prior to project start, wireframing was completed to show ideal project design a
 ![Imgur](https://i.imgur.com/GXJJb8z.png)
 The entity relationship diagram (ERD) above details schema and model relationships developed during the project planning process.
 
+General Assembly - Second Project - MongooseEvents was planned and built in a week.
+
 Project planning materials are held in [this](https://trello.com/b/9BLf52OM/project-2) public Trello board.
 
 ## Technologies Used 💻
@@ -43,3 +45,7 @@ Project planning materials are held in [this](https://trello.com/b/9BLf52OM/proj
 ## Credits 🙏
 
 ## Icebox Features 🧊
+
+- Sorting the events for the date
+- Sorting the events for the category
+- Adding map feature for locations
