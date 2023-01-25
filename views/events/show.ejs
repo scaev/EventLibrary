@@ -3,18 +3,26 @@
 <section id="show-page">
   <div>Title:</div>
   <div><%= event.title %></div>
+  <div>Category:</div>
+  <div><%= event.eventCategory %></div>
   <div>Event Date:</div>
-  <div><%= event.eventDate.toLocaleDateString()%> - <%= event.eventDate.toLocaleTimeString('en-US')%></div>
+  <div>
+    <%= event.eventDate.toLocaleDateString()%> - <%=
+    event.eventDate.toLocaleTimeString('en-US')%>
+  </div>
+  <div>Location:</div>
+  <div><%= event.eventLocation %></div>
   <div>Participation Rate:</div>
-  <% if (event.comments.length) { %>
-    <% let total = 0 %> <% event.comments.forEach(function(c) { %> <% total +=
-        c.participationRate %>
-    <% }); %>
-    <strong> %<%= ((total / event.comments.length)*10).toFixed(1) %> </strong>
-    <% } else { %>
-    <div>No Participating Yet</div>
-    <% } %>
- 
+  <% if (event.comments.length) { %> <% let total = 0 %> <%
+  event.comments.forEach(function(c) { %> <% total += c.participationRate %> <%
+  }); %>
+  <strong
+    >Participant <%= (event.comments.length)%> - %<%= ((total /
+    event.comments.length)*10).toFixed(1) %>
+  </strong>
+  <% } else { %>
+  <div>No Participating Yet</div>
+  <% } %>
 </section>
 
 <br /><br />
