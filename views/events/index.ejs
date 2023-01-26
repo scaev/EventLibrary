@@ -4,19 +4,56 @@
 <div class="event-list">
   <% events.forEach(function(e) { %>
   <article class="event">
+    <% if (e.eventCategory === "Yoga"){ %>
     <img
-    class="event-image"
+      class="event-image"
       loading="lazy"
       src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80"
       alt=" "
     />
+    <% } else if(e.eventCategory === "Concert"){ %>
+    <img
+      class="event-image"
+      loading="lazy"
+      src="https://media.self.com/photos/5e70f72443731c000882cfe7/4:3/w_2560%2Cc_limit/GettyImages-125112134.jpg"
+      alt=" "
+    />
+    <% } else if(e.eventCategory === "Swimming"){ %>
+    <img
+      class="event-image"
+      loading="lazy"
+      src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/female-swimmer-at-the-swimming-pool-royalty-free-image-1568376387.jpg"
+      alt=" "
+    />
+    <% } else if(e.eventCategory === "Dance party"){ %>
+      <img
+        class="event-image"
+        loading="lazy"
+        src="https://seedschurch.ca/wp-content/uploads/2020/12/15896247_910138789018345_2284640004674777094_o.jpg"
+        alt=" "
+      />
+      <% } else if(e.eventCategory === "Happy Hour"){ %>
+        <img
+          class="event-image"
+          loading="lazy"
+          src="https://lonsdaleave.ca/wp-content/uploads/2020/01/Happy-Hour-Specials-Drinks-Beer-Wine-Cocktails-Lonsdale-Avenue-North-Vancouver-British-Columbia-Canada-1120x627.png"
+          alt=" "
+        />
+        <% } else if(e.eventCategory === "Karaoke"){ %>
+          <img
+            class="event-image"
+            loading="lazy"
+            src="https://fivethirtyeight.com/wp-content/uploads/2021/05/Karaoke-16x9-1.png?w=712"
+            alt=" "
+          />
+    <% }; %>
+
     <h1 class="event-name primary-headline"><%= e.title %></h1>
     <p class="event-date"><%= e.eventDate.toLocaleDateString() %></p>
-    <p class="event-category meta">
-      <%= e.eventCategory%> </p>
+    <p class="event-category meta"><%= e.eventCategory%></p>
     <a class="a-details" href="/events/<%= e._id %>">Details</a>
-    
   </article>
+  
   <% }); %>
 </div>
 
