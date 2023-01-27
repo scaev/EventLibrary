@@ -2,7 +2,7 @@
 
 ### Welcome to MongooseEvents! 🗓
 
-## 👀 Take a look at MongooseEvents [HERE](-)
+## 👀 Take a look at MongooseEvents [HERE](https://eventlibrary.herokuapp.com/)
 
 ## Meet the Developer! 🤝
 
@@ -17,12 +17,16 @@ Full Stack Developer
 ![wireframe](https://i.imgur.com/q9R1kFm.png)
 
 Prior to project start, wireframing was completed to show ideal project design and flow. The above screenshot details a basic design concept prior to beginning the project.
-![Imgur](https://i.imgur.com/GXJJb8z.png)
+
+![Imgur](https://i.imgur.com/uwMscIm.png)
+
 The entity relationship diagram (ERD) above details schema and model relationships developed during the project planning process.
 
 General Assembly - Second Project - MongooseEvents was planned and built in a week.
 
 Project planning materials are held in [this](https://trello.com/b/9BLf52OM/project-2) public Trello board.
+
+![Imgur](https://i.imgur.com/1cHiRMc.png)
 
 ## Technologies Used 💻
 
