@@ -112,8 +112,6 @@ button {
   height: 1rem;
   padding: 0 1rem;
   border-radius: 4px;
-  /* background: var(--color-accent); */
-  color: var(--color-white);
   cursor: pointer;
 }
 
@@ -168,7 +166,6 @@ table td {
 }
 
 #show-page {
- 
   background: hsl(var(--hue) 30% 90%);
   font-family: Fraunces;
   /* color: whitesmoke; */
