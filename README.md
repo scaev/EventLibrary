@@ -1,5 +1,4 @@
 <div align = "center">
-</br>
 
 # EventLibrary
 
@@ -49,6 +48,6 @@ Project planning materials are held in [this](https://trello.com/b/9BLf52OM/proj
 
 ## Icebox Features 🧊
 
-- Sorting the events for the date
-- Sorting the events for the category
-- Adding map feature for locations
+Sorting the events for the date
+Sorting the events for the category
+Adding map feature for locations
